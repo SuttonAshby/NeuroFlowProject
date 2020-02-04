@@ -66,7 +66,7 @@ const metaDisplay = (props) => {
                             <Typography align='center' variant='heading6'>FILTERS</Typography>
                         </Grid>
                         <Grid item xs={6}>
-                            <FilterButton label={"showAll"}update={props.update} /> {/* TODO ENFORCE COLOR CHANGES TO OTHER BUTTONS WHEN SHOW ALL IS USED */}
+                            <FilterButton label={"show all"}update={props.update} /> {/* TODO ENFORCE COLOR CHANGES TO OTHER BUTTONS WHEN SHOW ALL IS USED */}
                         </Grid>
                     </Grid>
                     <Grid item xs={12}>

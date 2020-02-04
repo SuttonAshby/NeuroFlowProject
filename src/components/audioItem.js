@@ -9,11 +9,10 @@ import PauseIcon from '@material-ui/icons/Pause';
 const AudioItem = (props) => {
     const url = props.url
     const [isPlaying, setPlay] = useState(false);
+    const [showFull, setShow] = useState(false);
     //TODO CHANGE BUTTON IF USER STARTS DIFFERENT TRACK
 
     const shortDes = props.description.split(" ").slice(0, 15).join(" ");
-    // console.log(shortDes)
-
 
     const styles = {
       paper:{
@@ -21,6 +20,9 @@ const AudioItem = (props) => {
         padding: '10px',
         margin: '10px',
         flexGrow: '1'
+      },
+      description:{
+          cursor: "pointer"
       }  
     }
 
@@ -53,8 +55,8 @@ const AudioItem = (props) => {
                     </Grid>
                 </Grid>
                 <Grid container item xs={12}>
-                    <Typography variant="body1">
-                        Description: {shortDes} ...
+                     <Typography style={styles.description}variant="body1" onClick={()=>{setShow(!showFull)}}>
+                        Description: {!showFull ? (`${shortDes} ...`) : props.description}
                     </Typography>
                 </Grid>                                       
             </Paper>

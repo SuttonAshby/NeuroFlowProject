@@ -25,7 +25,7 @@ class Home extends React.Component {
     }
 
     updateCategories = (type) => {
-        if(type == "showAll"){
+        if(type == "show all"){
             this.setState({showCategories: []}, ()=>{
                 // console.log("show all")
             })
